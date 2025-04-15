@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #eaf4e7; /* Verde claro para el fondo */
+}
+
+.form-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #4d774e; /* Verde oscuro para los encabezados */
+}
+
+.MenuOp {
+  margin-top: 20px;
+}
+
+.buttons a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.btn-3 {
+  background-color: #5ba35e; /* Verde para el botón */
+}
+
+.btn-3:hover {
+  background-color: #77c37b; /* Verde más claro al pasar el ratón */
+}
+
+.btn-3:active {
+  background-color: #467e48; /* Verde más oscuro al hacer clic */
+}

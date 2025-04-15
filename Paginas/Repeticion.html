@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Paginas/css/Repeticion.css">
+    <script src="../Paginas/js/Repeticion.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Lineales.html">Ejercicios Lineales</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Alternativos.html">Ejercicio Alternativos</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Repeticion.html">Ejercicio Repetición</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Otros.html">Ejercicio Otros</a></li>
+        </ul>
+      </nav>
+
+    <section >
+        <div class="EjerL">
+            <h1 class="tit">EJERCICIOS DE REPETECIÓN</h1>
+            <hr class="l1">
+            <!--EJERCICIO 11-->
+            <form id="patternPrinterForm">
+                <div class="modal fade" id="patternPrinterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Impresión de Patrón</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="numRows">Número de Filas:</label>
+                                    <input type="number" id="numRows" class="form-control" placeholder="Ingrese el número de filas" required min="1" oninput="validateNumRows()">
+                                </div>
+                                <div id="resul"></div>
+                                <div id="resultPatternPrinter"></div>
+                                <button type="button" class="boton-primario" onclick="imprimirPatron()">Imprimir Patrón</button>
+                                <button type="button" class="boton-secundario" onclick="limpiarFormularioPatternPrinter()">Limpiar</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#patternPrinterModal">Impresión de Patrón</button>
+            </form>
+
+        <!--EJERCICIO 12-->
+        <form id="guessNumberForm">
+            <div class="modal fade" id="guessNumberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Adivina el Número</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Intenta adivinar el número secreto entre 1 y 10:</p>
+                            <input type="number" id="guessedNumber" class="form-control" placeholder="Ingrese tu intento" required min="1" max="10" pattern="\d+">
+                            <div id="resultGuessNumber"></div>
+                            <button type="button" class="boton-primario" onclick="verificarAdivinanza()">Verificar</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioGuessNumber()">Reiniciar</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#guessNumberModal">Adivina el Número</button>
+        </form>
+        
+        
+        
+
+        <!--EJERCICIO 13-->
+      
+        <form id="SerieForm">
+            <div class="modal fade" id="Serie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Serie</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 class="fs-5">Calculadora de Serie</h1>
+                            <label for="txtNum">Ingrese un número:</label>
+                            <input type="text" id="txtNum" class="form-control mb-2" />
+                            
+                            <div id="lblRespModal" ></div>
+                            <div id="resultSerie"></div>
+                            <button type="button" class="boton-primario" onclick="calcularSerie()">Calcular</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormulario()">Limpiar</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#Serie">Serie</button>
+        </form>
+        
+        
+
+        <!--EJERCICIO 14-->
+       
+        <form id="piCalculatorForm">
+            <div class="modal fade" id="piCalculatorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Calculadora de π</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="resultPiCalculator"></div>
+                            <button type="button" class="boton-primario" onclick="calcularPi()">Calcular π</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioPiCalculator()">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#piCalculatorModal">Calculadora de π</button>
+        </form>
+        
+
+
+        <!--EJERCICIO 15-->
+
+        <form id="fibonacciSeriesForm">
+            <div class="modal fade" id="fibonacciSeriesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Serie de Fibonacci</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="numTerms">Número de Términos:</label>
+                                <input type="number" id="numTerms" class="form-control" placeholder="Ingrese el número de términos" required>
+                            </div>
+                            <div id="resultFibonacci"></div>
+                            <button type="button" class="boton-primario" onclick="generarFibonacci()">Generar Serie</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioFibonacci()">Limpiar</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#fibonacciSeriesModal">Serie de Fibonacci</button>
+        </form>
+
+       
+    </section>
+    
+
+
+</body>
+</html>

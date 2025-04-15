@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Paginas/css/Alternativos.css">
+    <script src="../Paginas/js/Alternativos.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Lineales.html">Ejercicios Lineales</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Alternativos.html">Ejercicio Alternativos</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Repeticion.html">Ejercicio Repetición</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Otros.html">Ejercicio Otros</a></li>
+        </ul>
+      </nav>
+
+    <section >
+        <div class="EjerL">
+            <h1 class="tit">EJERCICIOS ALTERNATIVOS</h1>
+            <hr class="l1">
+            <!--EJERCICIO 6-->
+            <form id="verifyNumberForm">
+                <div class="modal fade" id="verifyNumberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Verificar Número</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="numberToVerify">Ingrese un número entero:</label>
+                                    <input type="number" id="numberToVerify" class="form-control" placeholder="Ingrese un número entero" required>
+                                </div>
+                                <div id="resultVerifyNumber"></div>
+                                <button type="button" class="boton-primario" onclick="verificarNumero()">Verificar Número</button>
+                                <button type="button" class="boton-secundario" onclick="limpiarFormularioVerifyNumber()">Limpiar</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#verifyNumberModal">Verificar Número</button>
+            </form>
+
+        <!--EJERCICIO 7-->
+        <form id="morseConverterForm">
+            <div class="modal fade" id="morseConverterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Conversor de Morse</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="inputText">Ingrese el texto o código Morse:</label>
+                                <textarea id="inputText" class="form-control" placeholder="Ingrese el texto o código Morse" rows="3" required></textarea>
+                            </div>
+                            <div id="resultMorseConverter"></div>
+                            <button type="button" class="boton-primario" onclick="convertirMorse()">Convertir</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioMorseConverter()">Limpiar</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#morseConverterModal">Conversor de Morse</button>
+        </form>
+        
+        
+        
+
+        <!--EJERCICIO 8-->
+        <form id="minNumberForm">
+            <div class="modal fade" id="minNumberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Averiguar el Menor Número</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="number1">Número 1:</label>
+                                <input type="number" id="number1" class="form-control" placeholder="Ingrese el primer número" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="number2">Número 2:</label>
+                                <input type="number" id="number2" class="form-control" placeholder="Ingrese el segundo número" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="number3">Número 3:</label>
+                                <input type="number" id="number3" class="form-control" placeholder="Ingrese el tercer número" required>
+                            </div>
+                            <div id="resultMinNumber"></div> <br>
+                            <button type="button" class="boton-primario" onclick="encontrarMenorNumero()">Encontrar Menor Número</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioMinNumber()">Limpiar</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#minNumberModal">Averiguar el Menor Número</button>
+        </form>
+        
+        
+        
+
+        <!--EJERCICIO 9-->
+       
+        <form id="trigFunctionsForm">
+            <div class="modal fade" id="trigFunctionsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Menú de Funciones Trigonométricas</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="angle">Ingrese el ángulo en grados:</label>
+                                <input type="number" id="angle" class="form-control" placeholder="Ingrese el ángulo en grados" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="trigFunction">Seleccione la función trigonométrica:</label>
+                                <select id="trigFunction" class="form-select" required>
+                                    <option value="sine">Seno</option>
+                                    <option value="cosine">Coseno</option>
+                                    <option value="tangent">Tangente</option>
+                                </select>
+                            </div>
+                            <div id="resultTrigFunctions"></div> <br>
+                            <button type="button" class="boton-primario" onclick="calcularFuncionTrigonometrica()">Calcular</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioTrigFunctions()">Limpiar</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#trigFunctionsModal">Menú de Funciones Trigonométricas</button>
+        </form>
+
+
+        <!--EJERCICIO 10-->
+
+        <form id="ageCalculatorForm">
+            <div class="modal fade" id="ageCalculatorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Calculadora de Edad</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="birthDate">Ingrese la fecha de nacimiento:</label>
+                                <input type="date" id="birthDate" class="form-control" required>
+                            </div>
+                            <div id="resultAgeCalculator"></div>
+                            <button type="button" class="boton-primario" onclick="calcularEdad()">Calcular Edad</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioAgeCalculator()">Limpiar</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#ageCalculatorModal">Calculadora de Edad</button>
+        </form>
+
+       
+    </section>
+    
+
+
+</body>
+</html>

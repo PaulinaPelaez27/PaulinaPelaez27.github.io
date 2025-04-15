@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Paginas/css/Lineales.css">
+    <script src="../Paginas/js/Lineales.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Lineales.html">Ejercicios Lineales</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Alternativos.html">Ejercicio Alternativos</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Repeticion.html">Ejercicio Repetición</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Paginas/Otros.html">Ejercicio Otros</a></li>
+        </ul>
+      </nav>
+
+    <section >
+    
+        <div class="EjerL">
+            <h1 class="tit">EJERCICIOS LINEALES</h1>
+            <hr class="l1">
+            <!--EJERCICIO 1-->
+            <form id="angleForm">
+                <div class="modal fade" id="V1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Cálculo del ángulo de incidencia del sol</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="height">Altura del poste (h):</label>                                             <!--valores positivos y decimales-->
+                                    <input type="number" id="height" class="form-control" placeholder="Ingrese la altura del poste en metros" min="1" max="100" pattern="\d+(\.\d{1,2})?" title="Ingresa un valor positivo">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="shadowLength">Longitud de la sombra (s):</label>
+                                    <input type="number" id="shadowLength" class="form-control" placeholder="Ingrese la longitud de la sombra en metros" min="1" max="100" pattern="\d+(\.\d{1,2})?" title="Ingresa un valor positivo">
+                                </div>
+                                <div id="result"></div>
+                                <button type="button" id="calculateBtn" onclick="validarYCalcular()">Calcular</button>
+                                <button type="button" id="clearBtn" onclick="limpiarFormulario()">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#V1">Cálculo del ángulo de incidencia del sol</button>
+
+        <!--EJERCICIO 2-->
+        <form id="cylinderForm">
+            <div class="modal fade" id="cylinderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cálculo del volumen de un depósito cilíndrico</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="cylinderRadius">Radio de la base:</label>
+                                <input type="number" id="cylinderRadius" class="form-control" placeholder="Ingrese el radio de la base" min="1" max="100" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cylinderHeight">Altura del depósito:</label>
+                                <input type="number" id="cylinderHeight" class="form-control" placeholder="Ingrese la altura del depósito" min="1" max="100" required>
+                            </div>
+                            <div id="resultCilindrico"></div>
+                            <button type="button" class="boton-primario" onclick="calcularVolumenCilindrico()">Calcular</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioCilindrico()">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#cylinderModal">Cálculo del volumen de un depósito cilíndrico</button>
+        
+        
+        
+
+        <!--EJERCICIO 3-->
+        <form id="harvestForm">
+            <div class="modal fade" id="harvestModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Calculadora de Ganancias</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="harvestedWeight">Kilos de grano cosechados:</label>
+                                <input type="number" id="harvestedWeight" class="form-control" placeholder="Ingrese los kilos de grano cosechados" min="1" max="1000" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pricePerKilo">Precio de venta por kilo:</label>
+                                <input type="number" id="pricePerKilo" class="form-control" placeholder="Ingrese el precio de venta por kilo" min="1" max="1000" step="0.01" required>
+                            </div>
+                            <div id="resultHarvest"></div>
+                            <button type="button" class="boton-primario" onclick="calcularGanancias()">Calcular Ganancias</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioHarvest()">Limpiar</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#harvestModal">Calculadora de Ganancias</button>
+        </form>
+        
+        
+        
+
+        <!--EJERCICIO 4-->
+       
+        <form id="findSixthNumberForm">
+            <div class="modal fade" id="findSixthNumberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Encontrar el Sexto Número</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="firstNumber">Número 1 (5 cifras):</label>                                                     <!--solo Valores de 5 cifras-->
+                                <input type="text" id="firstNumber" class="form-control" placeholder="Ingrese el primer número de 5 cifras" maxlength="5" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="secondNumber">Número 2 (5 cifras):</label>
+                                <input type="text" id="secondNumber" class="form-control" placeholder="Ingrese el segundo número de 5 cifras" maxlength="5" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="thirdNumber">Número 3 (5 cifras):</label>
+                                <input type="text" id="thirdNumber" class="form-control" placeholder="Ingrese el tercer número de 5 cifras" maxlength="5" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fourthNumber">Número 4 (5 cifras):</label>
+                                <input type="text" id="fourthNumber" class="form-control" placeholder="Ingrese el cuarto número de 5 cifras" maxlength="5" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fifthNumber">Número 5 (5 cifras):</label>
+                                <input type="text" id="fifthNumber" class="form-control" placeholder="Ingrese el quinto número de 5 cifras" maxlength="5" required>
+                            </div>
+                            <div id="resultFindNumber"></div>
+                            <button type="button" class="boton-primario" onclick="findSixthNumber()">Encontrar Sexto Número</button>
+                            <button type="button" class="boton-secundario" onclick="limpiarFormularioFindNumber()">Limpiar</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#findSixthNumberModal">Encontrar el Sexto Número</button>
+        </form>
+
+
+        <!--EJERCICIO 5-->
+
+        <form id="resistanceForm">
+            <div class="modal fade" id="V5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cálculo de Resistencia Equivalente en Paralelo</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="resistencia1" class="etiqueta">Valor de la resistencia 1:</label>
+                                <input type="number" id="resistencia1" class="form-control" placeholder="Ingrese el valor de la resistencia 1" min="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="resistencia2" class="etiqueta">Valor de la resistencia 2:</label>
+                                <input type="number" id="resistencia2" class="form-control" placeholder="Ingrese el valor de la resistencia 2" min="1" required>
+                            </div>
+                            <label for="resistenciaEquivalente">La resistencia equivalente en paralelo es:</label>
+                            <label for="resistenciaEquivalente" id="resistenciaEquivalente">.......</label>
+                            <div id="resultF"></div>
+                            <button type="button" class="boton-primario" onclick="calcularResistenciaEquivalente()">Calcular Resistencia Equivalente</button>
+                            <button type="button" class="btn btn-secondary" onclick="limpiarCampos()">Limpiar</button>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#V5">Cálculo de Resistencia Equivalente en Paralelo</button>
+        </div>
+        
+        </form>
+       
+    </section>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dae6f0; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #73a9c2; 
+    text-align: center;
+  }
+  
+  .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .nav-item {
+    margin: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    color: #4682b4; 
+  }
+  
+  .EjerL {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tit {
+    color: #73a9c2;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .l1 {
+    border: 2px solid #73a9c2;
+  }
+  
+  .modal-content {
+    background-color: #f5f5f5;
+  }
+  
+  .etiqueta {
+    font-weight: bold;
+    color: #73a9c2;
+  }
+  
+  .campo-formulario {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-color: #e8e8e8;
+  }
+  
+  .boton-primario {
+    background-color: #4682b4; 
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .boton-primario:hover {
+    background-color: #31708f; 
+  }
+  
+  .contenedor-botones button {
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .contenedor-botones button:hover {
+    background-color: #85b5ce;
+  }
+  
+  .btn-info {
+    display: block;
+    margin: 20px auto;
+    background-color: #4682b4;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btn-info:hover {
+    background-color: #85b5ce;
+  }
+  
+  #editorContent {
+    min-height: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
